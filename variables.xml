@@ -1,0 +1,55 @@
+<root>
+    <student id="2008900">
+	<name>Mete</name>
+	<name>Duplicate</name>
+        <surname>Akdoğan</surname>
+        <gpa>3,60</gpa>
+        <address>Com.Eng.</address>
+        <postcode>35160</postcode>
+        <city>Izmir</city>
+    </student>
+    <student id="2008901">
+	<name>John</name>
+        <surname>Doe</surname>
+        <gpa>3,60</gpa>
+        <address>Com.Eng.</address>
+        <postcode>35160</postcode>
+        <city>Izmir</city>
+    </student>
+    <student rsid="aaa1323" id="2008902">
+	<name>Doe</name>
+        <surname>Lorem</surname>
+        <gpa>3,60</gpa>
+        <address>Com.Eng.</address>
+        <postcode>35160</postcode>
+        <city>Izmir</city>
+	<country>Turkey</country>
+    </student>
+    <student id="2008903" name="Mete">
+        <surname>Karadoğan</surname>
+        <gpa>4,00</gpa>
+	<percentage>100</percentage>
+        <address>Com.Eng.</address>
+        <postcode>35160</postcode>
+        <city>Izmir</city>
+    </student>
+    <student id="2008904" name="Comp" surname="Ress" gpa="1,50" address="Nowhere" postcode="35111" city="Dreamland"/>
+    <student id="12121">
+	<name>John</name>
+        <gpa>3,60</gpa>
+        <address>Com.Eng.</address>
+        <postcode>35160</postcode>
+        <city>Izmir</city>
+    </student>
+    <student id="2008999">
+	<name>John</name>
+        <surname>Doe</surname>
+        <gpa>3,60</gpa>
+        <address>Com.Eng.</address>
+        <postcode>35160</postcode>
+    </student>
+    <student id="2008998">
+	<name>John</name>
+        <gpa>3,60</gpa>
+    </student>
+</root>

@@ -1,0 +1,10 @@
+<mail>
+Dear <name/> <surname/>,
+
+This is an automatic message to inform you with your grades.
+Your student ID is <id/>. Your GPA is <gpa/>
+Have a great day!
+
+Your address: <address/>
+              <postcode/> <city/>
+</mail>
