@@ -1,9 +1,9 @@
 ## Mail Merge ##
-    
-      Mail merge helps you to create copies of a mail with different names,
+
+    Mail merge helps you to create copies of a mail with different names,
     addresses etc.
 
-    
+
     # Installation
 
       Simply run the command on your terminal:
