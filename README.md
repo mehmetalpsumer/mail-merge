@@ -1,37 +1,30 @@
-## Mail Merge ##
+# Mail Merge
+Mail merge helps you to create copies of a mail with different names,
+addresses etc.
 
-    Mail merge helps you to create copies of a mail with different names,
-    addresses etc.
+## Installation
+Simply run the command on your terminal:
+`make`
+*Make sure you are on correct directory.*
 
 
-    # Installation
+## Usage
+ Put the template in an XML file with a root and each placeholder
+as an empty XML tag. Create your another XML where each elements
+have an ID.
 
-      Simply run the command on your terminal:
-      'make'
+ Program takes 3 arguments, template xml, variables xml and an
+output folder address.
 
-      *Make sure you are on correct directory.*
-    
-    
-    # Usage
+`./mm -v variables.xml -t template.xml -o ~/mails`
 
-          Put the template in an XML file with a root and each placeholder
-        as an empty XML tag. Create your another XML where each elements
-        have an ID.
-          
-          Program takes 3 arguments, template xml, variables xml and an
-        output folder address.
+Each record will be printed with their IDs as txt format.
 
-        './mm -v variables.xml -t template.xml -o ~/mails'
+*Alternitavely for default template and variables on the repo
+run the following command*
 
-          Each record will be printed with their IDs as txt format.
+`make run`
 
-          *Alternitavely for default template and variables on the repo
-          run the following command*
-
-          'make run'
-
-    
-    # Known Bugs
-
-    - If the template XML file has a parent tag in the root it won't be
-    parsed. Such as <root><ATag> ..template here.. </ATag><root>
+ ## Known Bugs
+ - If the template XML file has a parent tag in the root it won't be
+ parsed. Such as <root><ATag> ..template here.. </ATag><root>
