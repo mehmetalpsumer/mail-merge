@@ -13,6 +13,7 @@ void parseVariables(char *path);
 void recursiveParse(xmlNode *node);
 char *formatChar(char *key, char *val);
 void writeToFile();
+static void _mkdir(const char *dir);
 
 // GLOBAL VARIABLES
 /*
@@ -89,7 +90,7 @@ int main(int argc, char **argv) {
     // create the output folder
     struct stat st = {0};
     if(output_found && stat(output_path, &st) == -1)
-        mkdir(output_path, 0700);
+        _mkdir(output_path);
 
     // start proceeding
     parseTemplate(template_path);
@@ -263,4 +264,26 @@ char *formatChar(char *key, char *val){
     strcat(tmp, ":");
     strcat(tmp, key);
     return tmp;
+}
+
+/*
+ * Creating directory recursively
+ * To allow input '-o ../somedir'
+ */
+static void _mkdir(const char *dir) {
+        char tmp[256];
+        char *p = NULL;
+        size_t len;
+
+        snprintf(tmp, sizeof(tmp),"%s",dir);
+        len = strlen(tmp);
+        if(tmp[len - 1] == '/')
+                tmp[len - 1] = 0;
+        for(p = tmp + 1; *p; p++)
+                if(*p == '/') {
+                        *p = 0;
+                        mkdir(tmp, S_IRWXU);
+                        *p = '/';
+                }
+        mkdir(tmp, S_IRWXU);
 }
