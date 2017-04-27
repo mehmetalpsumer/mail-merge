@@ -20,4 +20,4 @@ output folder address.
 Each record will be printed with their IDs as txt format.
 
  ## Reqiurements
- - lixml2
+ - libxml2
